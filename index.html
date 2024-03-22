@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Recoin</title>
+	<meta name="description" content="Description du bar Recoin.todo" />
+	<meta property="og:title" content="Recoin" />
+	<meta name="og:description" content="Description du bar Recoin.todo" />
+	<meta property="og:site_name" content="Recoin" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://recoin.todo.com" />
+	<meta property="og:locale" content="fr_FR" />
+	<link rel="shortcut icon" href="https://recoin.todo.com/favicon.ico" />
+	<link rel="canonical" href="https://recoin.todo.com/" />
+	<link rel='shortlink' href='https://recoin.todo.com/' />
+
+	<style>
+		:root {
+			--color-white: #ffffff;
+			--color-black: #22272e;
+			--color-black-contrasted: #24292f;
+			--color-white-contrasted: #ffffff;
+			--max-width: 750px;
+			--header-height: 150px;
+			--footer-height: 50px;
+			--padding: 20px;
+		}
+
+		:root {
+			--color-background: var(--color-white);
+			--color-text: var(--color-black-contrasted);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--color-background: var(--color-black);
+				--color-text: var(--color-white-contrasted);
+			}
+		}
+
+		* {
+			font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+			letter-spacing: 1px;
+			color: var(--color-text);
+		}
+
+		html {
+			height: 100%;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+			height: 100%;
+			background-color: var(--color-background);
+		}
+
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: var(--header-height);
+			flex-shrink: 0;
+		}
+
+		main {
+			display: flex;
+			gap: 30px 0;
+			flex-direction: column;
+			justify-content: center;
+			max-width: var(--max-width);
+			padding: 0 var(--padding) calc(var(--footer-height) + var(--padding) + 100px) var(--padding);
+			flex-grow: 1;
+
+			@media (orientation: portrait) {
+				justify-content: start;
+			}
+		}
+
+		.description {
+			text-align: center;
+			font-size: 24px;
+		}
+
+		.information {
+			display: flex;
+			flex-direction: column;
+			gap: var(--padding) 0;
+		}
+
+		.information__section {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: var(--padding) 0;
+		}
+
+		@media only screen and (max-width: calc(750px + 40px)) {
+			.separator {
+				.information__subsection:last-child {
+					display: none;
+				}
+			}
+		}
+
+		.information__subsection {
+			flex-basis: 375px;
+		}
+
+		footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: var(--footer-height);
+			background-color: var(--color-background);
+		}
+
+		a {
+			color: var(--color-text);
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="logo recoin-logo ">LOGO todo</div>
+	</header>
+
+	<main>
+		<div class="description">
+			<p>
+				Todo todo
+				<br />
+				Wines full of life.
+				<br />
+				You-might-start-singing-at-the-end soundtrack.
+			</p>
+		</div>
+
+		<div class="information">
+			<div class="restaurant information__section">
+				<div class="information__subsection">
+					<div><b>Restaurant</b></div>
+					<a href="https://maps.app.goo.gl/U83Qw2X3z1jT2ZcU6" target="_blank">
+						60 Rue St Sabin, 75011 Paris
+					</a>
+				</div>
+				<div class="information__subsection">
+					<div>Lundi 17h00 - 1h00 / Mardi-Vendredi 9h00 - 1h00 / Samedi 10h00 - 1h00 / Dimanche fermé</div>
+					<a href="todo"><b>Réserver une table</b></a>
+				</div>
+			</div>
+
+			<div class="restaurant information__section separator">
+				<div class="information__subsection">
+					—
+				</div>
+				<div class="information__subsection">
+					—
+				</div>
+			</div>
+
+			<div class="links information__section">
+				<div class="information__subsection">
+					<span>Tel — <a href="tel:0155286736">0155286736</a></span>
+				</div>
+				<div class="information__subsection">
+					<a href="https://www.instagram.com/recoinparis" target="_blank">Instagram</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<a href="mailto:todo"><b>Nous contacter</b></a>
+	</footer>
+</body>
+
+</html>
