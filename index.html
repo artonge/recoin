@@ -110,6 +110,7 @@
 		footer {
 			display: flex;
 			justify-content: space-between;
+			align-items: end;
 			gap: 8px;
 			flex-wrap: wrap;
 			width: 100%;
@@ -120,11 +121,42 @@
 			text-align: center;
 		}
 
+		footer>* {
+			flex-basis: 30%;
+		}
+
+		footer>*:first-child {
+			text-align: left;
+		}
+
+		footer>*:last-child {
+			text-align: right;
+		}
+
+		footer .hours {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+			align-self: center;
+			justify-self: right;
+		}
+
 		@media (max-width: 1200px) {
 			footer {
 				flex-direction: column-reverse;
 				align-items: center;
 			}
+
+			footer>* {
+				flex-basis: auto;
+			}
+
+			footer .hours {
+				order: 1;
+				padding: 8px 0;
+				border-bottom: 1px solid var(--color-text);
+			}
+
 		}
 
 		a {
@@ -148,8 +180,7 @@
 			</div>
 		</details>
 
-		<a
-			href="https://bookings.zenchef.com/results?rid=364761&pid=1001">
+		<a href="https://bookings.zenchef.com/results?rid=364761&pid=1001">
 			<b>Book a table</b>
 		</a>
 	</header>
@@ -159,6 +190,14 @@
 
 	<footer>
 		<a href="https://www.instagram.com/recoinparis" target="_blank">Instagram</a>
+
+		<div class="hours">
+			<span>Lundi - vendredi · 09:00-01:00</span>
+			<span>Samedi · 10:00-01:00</span>
+			<span class="em-dash">—</span>
+			<span>Déjeuner · 12h-14h</span>
+			<span>Dîner · 19h-22h</span>
+		</div>
 
 		<a href="https://maps.app.goo.gl/U83Qw2X3z1jT2ZcU6" target="_blank">
 			60 Rue St Sabin, 75011 Paris
